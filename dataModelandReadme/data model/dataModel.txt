@@ -40,5 +40,3 @@ Scalability: The choice of data types and properties ensures that the database c
 Flexibility: Fields like Description and Status allow for detailed task management and the ability to adapt to different types of workflows.
 Integrity: The use of non-nullable fields for crucial information like Title, Status, and timestamps ensures that the data remains consistent and reliable.
 Auditability: Timestamp fields help track the lifecycle of each task, useful for audits, troubleshooting, and historical analysis.
-
-

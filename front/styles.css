@@ -1,13 +1,56 @@
+.header-logo {
+  position: absolute;  /* Use absolute positioning */
+  left: 10px;          /* Distance from the left side of the header */
+  top: 10px;           /* Distance from the top of the header */
+  height: 75px;        /* Control the size of the image */
+}
+header {
+  font-family: 'Montserrat', sans-serif; /* Apply Montserrat for a modern look */
+  text-align: center;
+  padding: 24px 20px; /* Adjust padding for better spacing */
+  border-bottom: 5px solid #ccc; /* Subtle border color */
+  background-color: white; /* Light grey background for a subtle look */
+  box-shadow: 0 2px 4px rgba(0,0,0,0.1); /* Adds subtle shadow for depth */
+  animation: fadeIn 0.5s ease-out;
+}
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(-20px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+h1.lead {
+  font-size: 28px; /* Larger font size for the title */
+  font-weight: 700; /* Bold font weight */
+  color: #333; /* Dark gray for better readability */
+  margin: 20px 0 10px; /* Adjusted margins for better layout */
+  letter-spacing: 1px; /* Slight letter spacing for elegance */
+}
+
+.custom-btn {
+  background-color: #1b602b; /* Green color, adjust if needed */
+  border: none; /* Remove default border */
+  color: white;
+  padding: 10px 20px; /* Adequate padding */
+  font-size: 16px; /* Readable font size */
+  border-radius: 5px; /* Slightly rounded corners for a modern look */
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Subtle shadow for depth */
+  transition: background-color 0.2s, box-shadow 0.2s; /* Smooth transitions */
+}
+
+
+.custom-btn:hover, .custom-btn:focus {
+  background-color: #218838; /* Slightly darker green on hover/focus */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* More prominent shadow on hover/focus */
+  outline: none; /* Remove outline on focus for a cleaner look */
+}
+
 body {
   font-family: 'Open Sans', sans-serif;
   font-size: 16px;
   color: #020202
 }
+
 details {
   display: block;
-}
-h1 {
-  font-weight: 900;
 }
 .flex-container {
   display: flex;
@@ -18,18 +61,80 @@ h1 {
 }
 .swim-lanes {
   min-height: 60vh;
-  color: #3c896d
+  color: #365a53;
+  background: linear-gradient(to right, #365a53, #ffffff); /* Gradient from light teal to white */
+  padding: 20px;
+  border-radius: 10px;
+}
+#to-do .card-header {
+  background-color: #f9d5e5; /* Light pink background */
+  color: #020202; /* Dark text for contrast */
+  border-style: solid;
 }
 
+#to-do .card-body {
+  background-color: #cfc1af; /* Light beige background */
+  border-style: solid;
+}
+
+/* Styling for "In Progress" section */
+#in-progress .card-header {
+  background-color: #86c5da; /* Light blue background */
+  color: #020202;
+  border-style: solid;
+}
+
+#in-progress .card-body {
+  background-color: #d0e8f2; /* Very light blue background */
+  border-style: solid;
+}
+
+/* Styling for "Done" section */
+#done .card-header {
+  background-color: #a7d7c5; /* Soft green background */
+  color: #020202;
+  border-style: solid;
+}
+
+#done .card-body {
+  background-color: #e3f6f5; /* Very light green background */
+  border-style: solid;
+}
+
+
 .task-card {
-  margin: 0 auto;
-  color: #3c896d
+  background-color: #365a53;  /* Dark teal background */
+  color: #ffffff;             /* White text for better contrast */
+  margin: 10px auto;          /* Sufficient spacing around cards */
+  padding: 15px;              /* Internal padding for content spacing */
+  border-radius: 8px;         /* Rounded corners for a modern look */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);  /* Subtle shadow for depth */
+  max-width: 90%;             /* Maximum width, adjust as necessary */
+  box-sizing: border-box;     /* Includes padding and border in the element's total width and height */
+  transition: transform 0.3s ease, box-shadow 0.3s ease; /* Smooth transitions for hover effects */
 }
 
 .task-card:hover {
-  cursor: grab;
-  color: #3c896d
+  transform: translateY(-5px);  /* Slight lift effect on hover */
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3); /* Increased shadow on hover for a "raised" effect */
 }
+
+.task-card h3, .task-card p {
+  margin: 10px 0;  /* Vertical spacing between elements */
+}
+
+.task-card h3 {
+  font-size: 1.25rem; /* Larger font size for titles */
+  color: #d1e8e2;    /* Light teal for headers to stand out */
+}
+
+.task-card p {
+  font-size: 1rem;   /* Standard font size for paragraph */
+  line-height: 1.6;  /* Improved line spacing for readability */
+  color: #f4f4f4;    /* Very light grey for paragraphs */
+}
+
+
 
 .task-card.dragging {
   cursor: grabbing;
@@ -37,9 +142,26 @@ h1 {
   opacity: 0.5;
   color: #3c896d
 }
-header h1 {
-  color: #0D1321
+.btn-delete-task {
+  background-color: #ff4757; /* Bright red background for attention */
+  color: white; /* White text */
+  border: none; /* Remove default border */
+  padding: 8px 16px; /* Padding around text */
+  font-size: 16px; /* Slightly larger font size */
+  border-radius: 4px; /* Rounded corners */
+  transition: background-color 0.3s ease; /* Smooth transition for hover effect */
 }
+
+.btn-delete-task:hover, .btn-delete-task:focus {
+  background-color: #e84118; /* Darker shade when hovered or focused */
+  color: white; /* Ensures text remains white */
+  outline: none; /* Removes the outline on focus */
+}
+
+.btn-delete-task i {
+  margin-right: 5px; /* Space between icon and text */
+}
+
 .custom-btn {
   background-color: #3c896d;
   border-color: #4D685A; 
@@ -47,5 +169,60 @@ header h1 {
 .lane-hover {
   /* Example style for hover effect */
   background-color: #f8f9fa;
+}
+footer {
+  background-color: #2c3e50; /* Dark background for footer */
+  color: #fff; /* White text for contrast */
+  font-family: 'Roboto', sans-serif; /* Modern, readable font */
+  padding: 20px; /* Adequate padding */
+  text-align: center; /* Centered text */
+}
+
+.flex-container {
+  display: flex;
+  justify-content: space-around; /* Even spacing around items */
+  align-items: center; /* Vertically align items */
+  flex-wrap: wrap; /* Allow items to wrap on smaller screens */
+}
+
+nav a {
+  color: #4cd137; /* Bright color for links for visibility */
+  text-decoration: none; /* No underline */
+  font-weight: 500; /* Medium font weight */
+}
+
+nav a:hover {
+  text-decoration: underline; /* Underline on hover for interaction */
+}
+
+article {
+  font-size: 20px; /* Larger font size for prominence */
+}
+
+details {
+  font-size: 16px; /* Suitable font size for additional information */
+  max-width: 500px; /* Max width to prevent overly long lines */
+  margin: 10px auto; /* Centering and spacing around details */
+}
+
+details summary {
+  font-weight: bold; /* Bold summary for emphasis */
+  cursor: pointer; /* Indicates it's clickable */
+}
+@media (max-width: 768px) {
+  .flex-container {
+      flex-direction: column; /* Stack elements on smaller screens */
+  }
+
+  nav, article, details {
+      margin-bottom: 10px; /* Space between stacked elements */
+  }
+}
+nav a {
+  transition: color 0.3s ease; /* Smooth transition for color change */
+}
+
+nav a:hover {
+  color: #8c7ae6; /* Change link color on hover */
 }
 

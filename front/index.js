@@ -16,7 +16,11 @@ function createTaskCard(task) {
     const daysUntilDue = dayjs(dueDate).diff(today, 'day');
 
     card.append(title, description, $("<p>").text(`Due Date: ${dueDate}`));
-    const deleteButton = $("<button>").text("Delete").click(() => handleDeleteTask(task.id));
+    const deleteButton = $("<button>")
+    .text("Delete")
+    .addClass("btn btn-delete-task") // Add Bootstrap and custom classes
+    .html('<i class="fas fa-trash"></i> Delete') // Using Font Awesome icon
+    .click(() => handleDeleteTask(task.id));
     card.append(deleteButton);
     return card;
 }
@@ -149,33 +153,6 @@ async function getAllTasks() {
         console.error("Failed to fetch tasks:", error);
     }
 }
-
-function seedDatabase() {
-    const tasks = JSON.parse(localStorage.getItem("tasks")) || [];
-    fetch('http://localhost:3000/api/seed', {
-        method: 'POST',
-        headers: {
-            'Content-Type': 'application/json'
-        },
-        body: JSON.stringify({ tasks })
-    })
-    .then(response => {
-        if (!response.ok) {
-            throw new Error(`HTTP error! Status: ${response.status}`);
-        }
-        return response.json();
-    })
-    .then(data => {
-        console.log("Database seeded successfully:", data);
-        alert("Database seeded successfully!");
-    })
-    .catch(error => {
-        console.error("Failed to seed database:", error);
-        alert("Failed to seed database. Check console for more details.");
-    });
-}
-
-
 $(document).ready(function () {
     getAllTasks(); 
     setupEventHandlers();
@@ -200,7 +177,6 @@ function getAllTasks() {
 function setupEventHandlers() {
     $("#add-task-form").on("submit", handleAddTask);
     $("#taskDueDate").datepicker({ dateFormat: "yy-mm-dd" });
-    $("#seedDatabaseBtn").on("click", seedDatabase);
     setupDroppableLanes();
 }
 
