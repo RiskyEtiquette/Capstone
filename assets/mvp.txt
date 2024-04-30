@@ -1,0 +1,25 @@
+Basic MVP Features List
+The Minimum Viable Product (MVP) for your task board should include:
+
+Task Creation: Users can add tasks using a form.
+Task Modification: Users can edit or delete tasks.
+Task Status Update: Users can mark tasks as done or move them to different lists.
+
+Main Features Implementation
+Interactive Form: Implement a form on the front end where users can input task details. This form should handle validation and provide feedback.
+Task Manipulation: Enable users to interact with the task list directly from the UI to perform actions like marking as done, editing, or deleting.
+Dynamic Task List: The front-end should update the display of tasks dynamically based on user actions without needing to reload the page.
+Server Interaction
+API Development: Use a server-side framework (like Express.js for Node.js) to handle API requests for creating, updating, and deleting tasks.
+Database Connection: Use pgAdmin to set up your PostgreSQL database and Postman to test your API routes.
+Front-end Requests: From the front end, make AJAX calls to your server using a library like Axios or Fetch API to handle task-related operations.
+Custom Styling and Interactivity
+Styling: Use CSS frameworks like Bootstrap or TailwindCSS for quick styling and responsiveness. Add custom CSS for branding and personalized UI elements.
+Interactivity: Enhance the user experience with interactive elements using JavaScript or a framework/library like React or Vue.js. Implement features like drag-and-drop for task lists or modals for editing tasks.
+Implementation Tools and Technologies
+Front-end: HTML, CSS, JavaScript, React.js (optional for more complex interactivity)
+Back-end: Node.js, Express.js
+Database: PostgreSQL
+API Testing: Postman
+Version Control: Git and GitHub for source code management
+Deployment: Heroku or Netlify for hosting

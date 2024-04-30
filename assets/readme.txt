@@ -1,0 +1,58 @@
+Task Board Web Application
+Description
+Task Board is a full-stack web application designed for task management. It enables users to add, delete, update, and view tasks. The application is built using Node.js for the backend and HTML, CSS, and JavaScript for the frontend. It utilizes PostgreSQL as the database.
+
+Features
+Add new tasks with details such as title, description, due date, priority, assignee, and status.
+View all tasks in different statuses (To Do, In Progress, Done).
+Update the status of tasks by dragging and dropping between columns.
+Delete tasks.
+Seed the database with initial data.
+Prerequisites
+Before setting up the project, ensure you have the following installed:
+
+Node.js
+PostgreSQL
+npm (Node package manager)
+Installation
+Database Setup
+Install PostgreSQL and set up a new database.
+Create a .env file in the root of the project directory and fill in the following environment variables based on your database configuration:
+makefile
+Copy code
+DB_HOST=your_database_host
+DB_PORT=your_database_port
+DB_NAME=your_database_name
+DB_USER=your_database_user
+DB_PASSWORD=your_database_password
+Backend Setup
+Navigate to the project's root directory.
+Install the required npm packages:
+Copy code
+npm install
+Start the backend server:
+sql
+Copy code
+npm start
+Frontend Setup
+Open the front/index.html file in a live server environment of your choice.
+Usage
+Adding a Task: Click the "Add Task" button, fill in the task details, and submit the form.
+Viewing Tasks: Tasks are automatically loaded on the homepage under their respective statuses.
+Updating Task Status: Drag and drop tasks between columns to update their status.
+Deleting Tasks: Click the "Delete" button on any task card to remove the task.
+Seeding the Database: Click the "Seed Database" button to populate the database with initial data.
+Contributing
+Contributions to this project are welcome. Please follow these steps:
+
+Fork the repository.
+Create a new branch (git checkout -b feature-branch).
+Make changes and commit them (git commit -am 'Add some feature').
+Push to the branch (git push origin feature-branch).
+Create a new Pull Request.
+License
+Distributed under the ISC License. See LICENSE for more information.
+
+Contact
+Your Name - kadentreyd@gmail.com
+Project Link: https://github.com/RiskyEtiquette

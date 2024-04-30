@@ -1,0 +1,51 @@
+body {
+  font-family: 'Open Sans', sans-serif;
+  font-size: 16px;
+  color: #020202
+}
+details {
+  display: block;
+}
+h1 {
+  font-weight: 900;
+}
+.flex-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+}
+.swim-lanes {
+  min-height: 60vh;
+  color: #3c896d
+}
+
+.task-card {
+  margin: 0 auto;
+  color: #3c896d
+}
+
+.task-card:hover {
+  cursor: grab;
+  color: #3c896d
+}
+
+.task-card.dragging {
+  cursor: grabbing;
+  z-index: 1000;
+  opacity: 0.5;
+  color: #3c896d
+}
+header h1 {
+  color: #0D1321
+}
+.custom-btn {
+  background-color: #3c896d;
+  border-color: #4D685A; 
+}
+.lane-hover {
+  /* Example style for hover effect */
+  background-color: #f8f9fa;
+}
+
