@@ -37,7 +37,7 @@ const Task = sequelize.define('Task', {
     allowNull: true
   },
   status: {
-    type: DataTypes.STRING, // Consider using DataTypes.ENUM for predefined values like ['to-do', 'in-progress', 'completed']
+    type: DataTypes.STRING,
     allowNull: false,
     defaultValue: 'to-do'
   }

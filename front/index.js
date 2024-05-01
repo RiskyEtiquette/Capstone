@@ -18,8 +18,8 @@ function createTaskCard(task) {
     card.append(title, description, $("<p>").text(`Due Date: ${dueDate}`));
     const deleteButton = $("<button>")
     .text("Delete")
-    .addClass("btn btn-delete-task") // Add Bootstrap and custom classes
-    .html('<i class="fas fa-trash"></i> Delete') // Using Font Awesome icon
+    .addClass("btn btn-delete-task") 
+    .html('<i class="fas fa-trash"></i> Delete') 
     .click(() => handleDeleteTask(task.id));
     card.append(deleteButton);
     return card;
